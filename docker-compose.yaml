@@ -1,0 +1,144 @@
+version: '3.8'
+services:
+  zookeeper:
+    image: bitnami/zookeeper:latest
+    container_name: zookeeper-server
+    environment:
+      - ALLOW_ANONYMOUS_LOGIN=yes
+    volumes:
+      - zookeeper_data:/bitnami/zookeeper
+    networks:
+      - hw12-network
+
+  kafka:
+    image: bitnami/kafka:latest
+    container_name: kafka-server
+    hostname: kafka-server
+    depends_on:
+      - zookeeper
+    environment:
+      - KAFKA_CFG_NODE_ID=0
+      - KAFKA_CFG_PROCESS_ROLES=controller,broker
+      - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092,CONTROLLER://:9093
+      - KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
+      - KAFKA_CFG_CONTROLLER_QUORUM_VOTERS=0@kafka-server:9093
+      - KAFKA_CFG_CONTROLLER_LISTENER_NAMES=CONTROLLER
+      - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper-server:2181
+      - KAFKA_CFG_AUTO_CREATE_TOPICS_ENABLE=false
+      - KAFKA_CFG_LOG_RETENTION_HOURS=168
+      - KAFKA_CFG_LOG_RETENTION_BYTES=1073741824
+    ports:
+      - "9092:9092"
+    volumes:
+      - kafka_data:/bitnami/kafka
+    networks:
+      - hw12-network
+
+  kafka-init:
+    image: bitnami/kafka:latest
+    depends_on:
+      - kafka
+    entrypoint: ["/bin/bash", "-c"]
+    command: >
+      "
+       echo 'Waiting for Kafka to be ready...' &&
+       sleep 10 &&
+       kafka-topics.sh --create --if-not-exists --bootstrap-server kafka-server:9092 --replication-factor 1 --partitions 3 --topic input &&
+       kafka-topics.sh --create --if-not-exists --bootstrap-server kafka-server:9092 --replication-factor 1 --partitions 3 --topic processed &&
+       echo 'Kafka topics created.'
+       "
+    networks:
+      - hw12-network
+
+  spark:
+    image: bitnami/spark:3
+    container_name: hw12-spark-1
+    networks:
+      - hw12-network
+    environment:
+      - SPARK_MODE=master
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+      - SPARK_SSL_ENABLED=no
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./data:/data
+      - spark_checkpoint:/opt/app
+
+  spark-worker:
+    image: bitnami/spark:3
+    container_name: hw12-spark-worker-1
+    networks:
+      - hw12-network
+    depends_on:
+      - spark
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://hw12-spark-1:7077
+      - SPARK_WORKER_MEMORY=4G
+      - SPARK_WORKER_CORES=4
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+      - SPARK_SSL_ENABLED=no
+    volumes:
+      - ./data:/data
+      - spark_checkpoint:/opt/app
+      
+  cassandra:
+    image: cassandra:latest
+    container_name: cassandra-node
+    networks:
+      - hw12-network
+    ports:
+      - "9042:9042"
+    volumes:
+      - cassandra_data:/var/lib/cassandra
+    environment:
+      - CASSANDRA_START_RPC=true
+      - MAX_HEAP_SIZE=512M
+      - HEAP_NEWSIZE=100M
+
+  init-cassandra:
+    image: cassandra:latest
+    depends_on:
+      - cassandra
+    volumes:
+      - ./scripts:/scripts
+    entrypoint: ["/bin/bash", "-c"]
+    command: >
+      "
+      echo 'Waiting for Cassandra to be ready...' &&
+      until cqlsh cassandra-node -e 'DESCRIBE KEYSPACES;' > /dev/null 2>&1; do
+        echo 'Cassandra is not ready yet, waiting...' &&
+        sleep 5;
+      done &&
+      echo 'Running CQL script...' &&
+      cqlsh cassandra-node -f /scripts/create-tables.cql
+      "
+    networks:
+      - hw12-network
+
+  wikipedia-producer:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    container_name: wikipedia-producer
+    restart: unless-stopped
+    depends_on:
+      - kafka
+      - kafka-init
+    networks:
+      - hw12-network
+
+networks:
+  hw12-network:
+    name: hw12-network
+
+volumes:
+  zookeeper_data:
+  kafka_data:
+  spark_checkpoint:
+  cassandra_data:

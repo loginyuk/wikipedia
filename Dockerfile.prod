@@ -1,0 +1,10 @@
+FROM python:3.9-slim
+
+WORKDIR /src/app
+
+COPY requirements/requirements-prod.txt .
+COPY app /src/app
+
+RUN pip install -r requirements-prod.txt --no-cache-dir
+
+CMD ["python", "/src/app/producer.py"]
