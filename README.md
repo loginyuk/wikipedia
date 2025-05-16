@@ -1,7 +1,7 @@
 
-# Homework 12: 🤖 Spark Streaming with Cassandra and Kafka
+# Project: 🤖 
 
-Author: **Lohin Yurii**
+Author: **Lohin Yurii, Bron**
 
 
 ## 🖥 Usage
@@ -9,7 +9,7 @@ Author: **Lohin Yurii**
 ### How to run the application
 
 1. Clone the repository
-1. Navigate to folder hw12
+1. Navigate to folder 
 1. To run:
     - Spark cluster (master and worker)
     - Kafka with Zookeeper
@@ -25,13 +25,3 @@ Author: **Lohin Yurii**
 
 
 ### Results
-
-
-1. Proof of running all containers
-    ![](photos/docker-ps.png)
-1. Proof of running `input` topic
-    ![](photos/input.png)
-1. Proof of running `processed` topic
-    ![](photos/processed.png)
-1. Proof of writing to `Cassandra`
-    ![](photos/cassandra.png)

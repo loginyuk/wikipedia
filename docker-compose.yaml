@@ -8,7 +8,7 @@ services:
     volumes:
       - zookeeper_data:/bitnami/zookeeper
     networks:
-      - hw12-network
+      - wiki-network
 
   kafka:
     image: bitnami/kafka:latest
@@ -32,7 +32,7 @@ services:
     volumes:
       - kafka_data:/bitnami/kafka
     networks:
-      - hw12-network
+      - wiki-network
 
   kafka-init:
     image: bitnami/kafka:latest
@@ -43,18 +43,17 @@ services:
       "
        echo 'Waiting for Kafka to be ready...' &&
        sleep 10 &&
-       kafka-topics.sh --create --if-not-exists --bootstrap-server kafka-server:9092 --replication-factor 1 --partitions 3 --topic input &&
-       kafka-topics.sh --create --if-not-exists --bootstrap-server kafka-server:9092 --replication-factor 1 --partitions 3 --topic processed &&
+       kafka-topics.sh --create --if-not-exists --bootstrap-server kafka-server:9092 --replication-factor 1 --partitions 3 --topic wiki-topic &&
        echo 'Kafka topics created.'
        "
     networks:
-      - hw12-network
+      - wiki-network
 
   spark:
     image: bitnami/spark:3
-    container_name: hw12-spark-1
+    container_name: wiki-spark-1
     networks:
-      - hw12-network
+      - wiki-network
     environment:
       - SPARK_MODE=master
       - SPARK_RPC_AUTHENTICATION_ENABLED=no
@@ -69,14 +68,14 @@ services:
 
   spark-worker:
     image: bitnami/spark:3
-    container_name: hw12-spark-worker-1
+    container_name: wiki-spark-worker-1
     networks:
-      - hw12-network
+      - wiki-network
     depends_on:
       - spark
     environment:
       - SPARK_MODE=worker
-      - SPARK_MASTER_URL=spark://hw12-spark-1:7077
+      - SPARK_MASTER_URL=spark://wiki-spark-1:7077
       - SPARK_WORKER_MEMORY=4G
       - SPARK_WORKER_CORES=4
       - SPARK_RPC_AUTHENTICATION_ENABLED=no
@@ -91,7 +90,7 @@ services:
     image: cassandra:latest
     container_name: cassandra-node
     networks:
-      - hw12-network
+      - wiki-network
     ports:
       - "9042:9042"
     volumes:
@@ -119,7 +118,7 @@ services:
       cqlsh cassandra-node -f /scripts/create-tables.cql
       "
     networks:
-      - hw12-network
+      - wiki-network
 
   wikipedia-producer:
     build:
@@ -131,11 +130,24 @@ services:
       - kafka
       - kafka-init
     networks:
-      - hw12-network
+      - wiki-network
+  
+  rest-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rest-api
+    ports:
+      - "8081:8081"
+    networks:
+      - wiki-network
+    depends_on:
+      - cassandra
+
 
 networks:
-  hw12-network:
-    name: hw12-network
+  wiki-network:
+    name: wiki-network
 
 volumes:
   zookeeper_data:

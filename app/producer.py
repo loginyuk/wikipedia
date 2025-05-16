@@ -14,7 +14,7 @@ logging.basicConfig(
 logger = logging.getLogger('wikipedia-producer')
 
 bootstrap_servers = "kafka-server:9092"
-topic_name = "input"
+topic_name = "wiki-topic"
 wiki_url = "https://stream.wikimedia.org/v2/stream/page-create"
 
 # wait for Kafka topic to be created

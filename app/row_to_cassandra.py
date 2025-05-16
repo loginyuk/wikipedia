@@ -1,6 +1,6 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import from_json, col
-from pyspark.sql.types import StructType, StringType
+from pyspark.sql.functions import from_json, col, to_json, struct, date_trunc, to_timestamp
+from pyspark.sql.types import StructType, StringType, BooleanType
 import time
 
 spark = SparkSession.builder \
@@ -10,36 +10,53 @@ spark = SparkSession.builder \
 spark.sparkContext.setLogLevel("WARN")
 
 kafka_server = "kafka-server:9092"
-output_topic = "processed"
-cassandra_keyspace = "hw12_lohin"
-cassandra_table = "wiki"
+input_topic = "wiki-topic"
+cassandra_keyspace = "wiki_keyspace"
+cassandra_table = "wiki_row"
 
 
 # reading
 df = spark.readStream \
     .format("kafka") \
     .option("kafka.bootstrap.servers", kafka_server) \
-    .option("subscribe", output_topic) \
+    .option("subscribe", input_topic) \
     .option("startingOffsets", "latest") \
     .option("failOnDataLoss", "false") \
     .option("maxOffsetsPerTrigger", 1000) \
     .load()
 
-# define schema for json
 schema = StructType() \
-    .add("user_id", StringType()) \
-    .add("domain", StringType()) \
-    .add("created_at", StringType()) \
-    .add("page_title", StringType())
+    .add("meta", StructType().add("domain", StringType()).add("id", StringType())) \
+    .add("page_id", StringType()) \
+    .add("page_title", StringType()) \
+    .add("performer", StructType() \
+        .add("user_id", StringType()) \
+        .add("user_text", StringType()) \
+        .add("user_is_bot", BooleanType())) \
+    .add("rev_timestamp", StringType())
 
 # parsing json
 json_df = df.selectExpr("CAST(value AS STRING) as json_str") \
     .select(from_json(col("json_str"), schema).alias("data")) \
-    .select("data.*")
+    .select(
+        col("data.meta.domain").alias("domain"),
+        col("data.meta.id").alias("event_id"),
+        col("data.page_id").alias("page_id"),
+        col("data.page_title").alias("title"),
+        col("data.performer.user_is_bot").alias("is_bot"),
+        col("data.performer.user_id").alias("user_id"),
+        col("data.performer.user_text").alias("user_name"),
+        to_timestamp(col("data.rev_timestamp")).alias("timestamp")
+    ) \
+    .withColumn("event_hour", date_trunc("hour", col("timestamp"))) \
+    .filter(col("user_id").isNotNull())
 
-# Функція для обробки батчів
+ 
+# filtered_df = json_df.filter((col("user_id").isNotNull()))
+
 def process_batch(batch_df, batch_id):
-    if not batch_df.isEmpty():
+    count = batch_df.count()
+    if count > 0:
         print(f"Processing batch: {batch_id}; amount: {batch_df.count()}")
         try:
             batch_df.write \
@@ -56,7 +73,7 @@ def process_batch(batch_df, batch_id):
 # writing
 query = json_df.writeStream \
     .foreachBatch(process_batch) \
-    .outputMode("update") \
+    .outputMode("append") \
     .option("checkpointLocation", "/opt/app/cassandra_writer_checkpoint") \
     .trigger(processingTime="10 seconds") \
     .start()

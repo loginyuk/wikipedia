@@ -1,0 +1,52 @@
+{
+    "$schema": "/mediawiki/revision/create/2.0.0",
+    "meta": {
+        "uri": "https://commons.wikimedia.org/wiki/File:Reykjav%C3%ADkurmeistaram%C3%B3t_2012_IMG_4990_(7199740520).jpg",
+        "request_id": "121e454b-fdbb-46f3-b8ba-a704678e928f",
+        "id": "9cada891-0775-45d8-a4ad-61d7acabf25b",
+        "dt": "2025-05-15T21:37:14Z",
+        "domain": "commons.wikimedia.org",
+        "stream": "mediawiki.page-create",
+        "topic": "eqiad.mediawiki.page-create",
+        "partition": 0,
+        "offset": 312624623
+    },
+    "database": "commonswiki",
+    "page_id": 165342109,
+    "page_title": "File:Reykjav\u00edkurmeistaram\u00f3t_2012_IMG_4990_(7199740520).jpg",
+    "page_namespace": 6,
+    "rev_id": 1032068910,
+    "rev_timestamp": "2025-05-15T21:37:13Z",
+    "rev_sha1": "0la32eof310vtwja9o89jh7b3xmhbxf",
+    "rev_minor_edit": false,
+    "rev_len": 487,
+    "rev_content_model": "wikitext",
+    "rev_content_format": "text/x-wiki",
+    "performer": {
+        "user_text": "DaxServer",
+        "user_groups": [
+            "ipblock-exempt",
+            "patroller",
+            "rollbacker",
+            "*",
+            "user",
+            "autoconfirmed"
+        ],
+        "user_is_bot": false,
+        "user_id": 4238209,
+        "user_registration_dt": "2014-10-26T07:29:36Z",
+        "user_edit_count": 233986
+    },
+    "page_is_redirect": false,
+    "comment": "Transferred from Flickr via #flickr2commons",
+    "parsedcomment": "Transferred from Flickr via #flickr2commons",
+    "dt": "2025-05-15T21:37:13Z",
+    "rev_slots": {
+        "main": {
+            "rev_slot_content_model": "wikitext",
+            "rev_slot_sha1": "0la32eof310vtwja9o89jh7b3xmhbxf",
+            "rev_slot_size": 487,
+            "rev_slot_origin_rev_id": 1032068910
+        }
+    }
+}
