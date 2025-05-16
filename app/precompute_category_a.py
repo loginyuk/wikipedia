@@ -1,7 +1,7 @@
 import time
 from datetime import datetime, timedelta
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col, count, collect_list, expr
+from pyspark.sql.functions import col, count, collect_list, expr, lit
 
 def wait_until_next_hour():
     now = datetime.utcnow()
@@ -12,19 +12,22 @@ def wait_until_next_hour():
 
 def check_and_run_reports(spark):
     keyspace = "wiki_keyspace"
-    last_hour = (datetime.utcnow().replace(minute=0, second=0, microsecond=0) - timedelta(hours=2))
+    last_hour_start = (datetime.utcnow().replace(minute=0, second=0, microsecond=0) - timedelta(hours=2))
+    last_hour_end = last_hour_start + timedelta(hours=1)
     
     df = spark.read.format("org.apache.spark.sql.cassandra") \
-        .options(table="domain_hourly_stats", keyspace=keyspace).load()
-    exists = df.filter(col("hour_bucket") == last_hour).limit(1).count() > 0
-    
+        .options(table="bot_creation_stats", keyspace=keyspace).load()
+
+    exists = df.filter((col("time_start") == last_hour_start) & (col("time_end") == last_hour_end)) \
+               .limit(1).count() > 0
+
     if exists:
-        next_hour = last_hour + timedelta(hours=1)
-        print(f"Data up to {next_hour} already exists, waiting for next hour...")
+        print(f"Data for {last_hour_start} to {last_hour_end} already exists, skipping computation.")
         return False 
     else:
+        print(f"Data for {last_hour_start} to {last_hour_end} does not exist, computing reports...")
         compute_and_write_reports(spark)
-        return True 
+        return True
 
 def compute_and_write_reports(spark):
     keyspace = "wiki_keyspace"
@@ -54,9 +57,10 @@ def compute_and_write_reports(spark):
     bot_stats = raw_df.filter(col("is_bot") == True) \
         .groupBy("domain") \
         .agg(count("*").alias("created_by_bots")) \
-        .withColumn("time_range", expr(f"'{start_time.isoformat()}/{end_time.isoformat()}'"))
+        .withColumn("time_start", lit(start_time)) \
+        .withColumn("time_end", lit(end_time))
     
-    bot_stats.select("time_range", "domain", "created_by_bots").write \
+    bot_stats.select("time_start", "time_end", "domain", "created_by_bots").write \
         .format("org.apache.spark.sql.cassandra") \
         .options(table="bot_creation_stats", keyspace=keyspace) \
         .mode("append") \
@@ -68,11 +72,12 @@ def compute_and_write_reports(spark):
             count("*").alias("page_count"),
             collect_list("title").alias("page_titles")
         ) \
-        .withColumn("time_range", expr(f"'{start_time.isoformat()}/{end_time.isoformat()}'")) \
+        .withColumn("time_start", lit(start_time)) \
+        .withColumn("time_end", lit(end_time)) \
         .orderBy(col("page_count").desc()) \
         .limit(20)
     
-    top_users.select("time_range", "user_id", "user_name", "page_count", "page_titles").write \
+    top_users.select("time_start", "time_end", "user_id", "user_name", "page_count", "page_titles").write \
         .format("org.apache.spark.sql.cassandra") \
         .options(table="top_users", keyspace=keyspace) \
         .mode("append") \

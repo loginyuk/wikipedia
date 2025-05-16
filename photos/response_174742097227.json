@@ -1,0 +1,1775 @@
+[
+  {
+    "time_start": "11:00",
+    "time_end": "12:00",
+    "statistics": [
+      {
+        "ab.wikipedia.org": 4
+      },
+      {
+        "af.wikipedia.org": 1
+      },
+      {
+        "ar.wikipedia.org": 33
+      },
+      {
+        "auth.wikimedia.org": 39
+      },
+      {
+        "az.wikipedia.org": 1
+      },
+      {
+        "be-tarask.wikipedia.org": 3
+      },
+      {
+        "bew.wikipedia.org": 1
+      },
+      {
+        "bg.wikipedia.org": 1
+      },
+      {
+        "bn.wikipedia.org": 5
+      },
+      {
+        "br.wikipedia.org": 2
+      },
+      {
+        "commons.wikimedia.org": 1494
+      },
+      {
+        "cs.wikipedia.org": 7
+      },
+      {
+        "cy.wiktionary.org": 1
+      },
+      {
+        "da.wikipedia.org": 3
+      },
+      {
+        "dag.wikipedia.org": 1
+      },
+      {
+        "de.wikipedia.org": 24
+      },
+      {
+        "de.wikisource.org": 2
+      },
+      {
+        "de.wiktionary.org": 78
+      },
+      {
+        "el.wiktionary.org": 3
+      },
+      {
+        "en.wikinews.org": 3
+      },
+      {
+        "en.wikipedia.org": 107
+      },
+      {
+        "en.wikiquote.org": 1
+      },
+      {
+        "en.wikisource.org": 14
+      },
+      {
+        "en.wiktionary.org": 53
+      },
+      {
+        "eo.wikipedia.org": 5
+      },
+      {
+        "es.wikipedia.org": 10
+      },
+      {
+        "et.wikipedia.org": 1
+      },
+      {
+        "eu.wikipedia.org": 1
+      },
+      {
+        "fa.wikipedia.org": 6
+      },
+      {
+        "fa.wiktionary.org": 1
+      },
+      {
+        "fi.wikipedia.org": 3
+      },
+      {
+        "fi.wiktionary.org": 18
+      },
+      {
+        "foundation.wikimedia.org": 3
+      },
+      {
+        "fr.wikipedia.org": 41
+      },
+      {
+        "fr.wikisource.org": 23
+      },
+      {
+        "fr.wiktionary.org": 22
+      },
+      {
+        "gl.wikipedia.org": 5
+      },
+      {
+        "gl.wiktionary.org": 1
+      },
+      {
+        "gpe.wikipedia.org": 5
+      },
+      {
+        "gu.wikipedia.org": 1
+      },
+      {
+        "ha.wikipedia.org": 1
+      },
+      {
+        "he.wikipedia.org": 10
+      },
+      {
+        "he.wikisource.org": 1
+      },
+      {
+        "hi.wikipedia.org": 4
+      },
+      {
+        "hif.wikipedia.org": 2
+      },
+      {
+        "hr.wikipedia.org": 6
+      },
+      {
+        "hu.wikipedia.org": 3
+      },
+      {
+        "hy.wikipedia.org": 4
+      },
+      {
+        "id.wikipedia.org": 6
+      },
+      {
+        "id.wikisource.org": 1
+      },
+      {
+        "ig.wikipedia.org": 1
+      },
+      {
+        "incubator.wikimedia.org": 2
+      },
+      {
+        "io.wikipedia.org": 2
+      },
+      {
+        "is.wiktionary.org": 5
+      },
+      {
+        "it.wikipedia.org": 17
+      },
+      {
+        "it.wikisource.org": 13
+      },
+      {
+        "ja.wikipedia.org": 12
+      },
+      {
+        "ja.wiktionary.org": 5
+      },
+      {
+        "ka.wikipedia.org": 4
+      },
+      {
+        "kge.wikipedia.org": 9
+      },
+      {
+        "kk.wikipedia.org": 1
+      },
+      {
+        "ko.wikipedia.org": 7
+      },
+      {
+        "ko.wikisource.org": 20
+      },
+      {
+        "ks.wikipedia.org": 1
+      },
+      {
+        "lv.wikipedia.org": 1
+      },
+      {
+        "meta.wikimedia.org": 11
+      },
+      {
+        "mg.wikipedia.org": 1
+      },
+      {
+        "mg.wiktionary.org": 33
+      },
+      {
+        "mk.wikipedia.org": 2
+      },
+      {
+        "ms.wikipedia.org": 3
+      },
+      {
+        "my.wikipedia.org": 1
+      },
+      {
+        "nl.wikipedia.org": 3
+      },
+      {
+        "no.wikipedia.org": 3
+      },
+      {
+        "ny.wikipedia.org": 3
+      },
+      {
+        "pa.wikipedia.org": 1
+      },
+      {
+        "pl.wikipedia.org": 14
+      },
+      {
+        "pl.wikisource.org": 8
+      },
+      {
+        "pl.wiktionary.org": 4
+      },
+      {
+        "pt.wikipedia.org": 6
+      },
+      {
+        "pt.wikisource.org": 2
+      },
+      {
+        "ro.wikipedia.org": 3
+      },
+      {
+        "ru.wikipedia.org": 29
+      },
+      {
+        "ru.wiktionary.org": 13
+      },
+      {
+        "si.wiktionary.org": 5
+      },
+      {
+        "simple.wikipedia.org": 3
+      },
+      {
+        "species.wikimedia.org": 4
+      },
+      {
+        "sq.wikipedia.org": 1
+      },
+      {
+        "sr.wikipedia.org": 6
+      },
+      {
+        "sr.wikiquote.org": 4
+      },
+      {
+        "sv.wikipedia.org": 3
+      },
+      {
+        "sw.wikipedia.org": 3
+      },
+      {
+        "ta.wikipedia.org": 3
+      },
+      {
+        "ta.wikisource.org": 2
+      },
+      {
+        "te.wikisource.org": 5
+      },
+      {
+        "tg.wikipedia.org": 5
+      },
+      {
+        "th.wikipedia.org": 8
+      },
+      {
+        "tly.wikipedia.org": 1
+      },
+      {
+        "tr.wikipedia.org": 9
+      },
+      {
+        "tt.wikipedia.org": 2
+      },
+      {
+        "uk.wikipedia.org": 38
+      },
+      {
+        "uk.wikisource.org": 1
+      },
+      {
+        "ur.wikipedia.org": 2
+      },
+      {
+        "uz.wikipedia.org": 4
+      },
+      {
+        "vi.wikipedia.org": 3
+      },
+      {
+        "vi.wikisource.org": 10
+      },
+      {
+        "wa.wiktionary.org": 1
+      },
+      {
+        "www.mediawiki.org": 70
+      },
+      {
+        "www.wikidata.org": 61
+      },
+      {
+        "zh-min-nan.wikipedia.org": 1
+      },
+      {
+        "zh-yue.wikipedia.org": 2
+      },
+      {
+        "zh.wikipedia.org": 20
+      },
+      {
+        "zh.wiktionary.org": 1
+      }
+    ]
+  },
+  {
+    "time_start": "12:00",
+    "time_end": "13:00",
+    "statistics": [
+      {
+        "ar.wikipedia.org": 74
+      },
+      {
+        "ary.wikipedia.org": 1
+      },
+      {
+        "auth.wikimedia.org": 34
+      },
+      {
+        "bg.wikipedia.org": 2
+      },
+      {
+        "bn.wikibooks.org": 1
+      },
+      {
+        "commons.wikimedia.org": 876
+      },
+      {
+        "cs.wikipedia.org": 4
+      },
+      {
+        "da.wikipedia.org": 2
+      },
+      {
+        "de.wikipedia.org": 20
+      },
+      {
+        "de.wikisource.org": 3
+      },
+      {
+        "de.wiktionary.org": 2
+      },
+      {
+        "en.wikipedia.org": 70
+      },
+      {
+        "en.wikisource.org": 9
+      },
+      {
+        "en.wikivoyage.org": 1
+      },
+      {
+        "en.wiktionary.org": 56
+      },
+      {
+        "eo.wikipedia.org": 7
+      },
+      {
+        "es.wikipedia.org": 11
+      },
+      {
+        "eu.wikipedia.org": 1
+      },
+      {
+        "fa.wikipedia.org": 6
+      },
+      {
+        "fa.wiktionary.org": 1
+      },
+      {
+        "fi.wikipedia.org": 3
+      },
+      {
+        "fi.wiktionary.org": 10
+      },
+      {
+        "foundation.wikimedia.org": 4
+      },
+      {
+        "fr.wikipedia.org": 13
+      },
+      {
+        "fr.wikisource.org": 30
+      },
+      {
+        "fr.wiktionary.org": 20
+      },
+      {
+        "frp.wikipedia.org": 1
+      },
+      {
+        "gl.wikipedia.org": 5
+      },
+      {
+        "he.wikipedia.org": 3
+      },
+      {
+        "he.wikisource.org": 8
+      },
+      {
+        "hi.wikipedia.org": 4
+      },
+      {
+        "hif.wikipedia.org": 1
+      },
+      {
+        "id.wikipedia.org": 3
+      },
+      {
+        "incubator.wikimedia.org": 2
+      },
+      {
+        "is.wiktionary.org": 11
+      },
+      {
+        "it.wikipedia.org": 13
+      },
+      {
+        "ja.wikipedia.org": 7
+      },
+      {
+        "kge.wikipedia.org": 1
+      },
+      {
+        "kk.wikipedia.org": 4
+      },
+      {
+        "ko.wikipedia.org": 9
+      },
+      {
+        "ko.wikisource.org": 1
+      },
+      {
+        "ku.wiktionary.org": 2
+      },
+      {
+        "lv.wikipedia.org": 2
+      },
+      {
+        "meta.wikimedia.org": 13
+      },
+      {
+        "mg.wiktionary.org": 12
+      },
+      {
+        "ms.wikipedia.org": 3
+      },
+      {
+        "nl.wikipedia.org": 4
+      },
+      {
+        "nl.wikisource.org": 2
+      },
+      {
+        "no.wikipedia.org": 1
+      },
+      {
+        "nup.wikipedia.org": 1
+      },
+      {
+        "ny.wikipedia.org": 3
+      },
+      {
+        "pl.wikipedia.org": 5
+      },
+      {
+        "pl.wikisource.org": 7
+      },
+      {
+        "pl.wiktionary.org": 2
+      },
+      {
+        "pt.wikipedia.org": 7
+      },
+      {
+        "ro.wikipedia.org": 2
+      },
+      {
+        "ru.wikipedia.org": 16
+      },
+      {
+        "ru.wiktionary.org": 5
+      },
+      {
+        "shn.wikinews.org": 1
+      },
+      {
+        "si.wiktionary.org": 2
+      },
+      {
+        "simple.wikipedia.org": 1
+      },
+      {
+        "sk.wikipedia.org": 1
+      },
+      {
+        "species.wikimedia.org": 2
+      },
+      {
+        "sr.wikipedia.org": 3
+      },
+      {
+        "sr.wikiquote.org": 1
+      },
+      {
+        "sv.wikipedia.org": 17
+      },
+      {
+        "ta.wikipedia.org": 1
+      },
+      {
+        "ta.wikisource.org": 3
+      },
+      {
+        "te.wikipedia.org": 3
+      },
+      {
+        "te.wikisource.org": 2
+      },
+      {
+        "tly.wikipedia.org": 2
+      },
+      {
+        "tr.wikipedia.org": 6
+      },
+      {
+        "uk.wikipedia.org": 11
+      },
+      {
+        "uk.wikiquote.org": 3
+      },
+      {
+        "uk.wikisource.org": 4
+      },
+      {
+        "ur.wikipedia.org": 2
+      },
+      {
+        "uz.wikipedia.org": 1
+      },
+      {
+        "vi.wikipedia.org": 1
+      },
+      {
+        "vi.wikisource.org": 4
+      },
+      {
+        "vo.wikipedia.org": 3
+      },
+      {
+        "wa.wiktionary.org": 1
+      },
+      {
+        "wikitech.wikimedia.org": 1
+      },
+      {
+        "www.mediawiki.org": 2
+      },
+      {
+        "www.wikidata.org": 60
+      },
+      {
+        "www.wikifunctions.org": 1
+      },
+      {
+        "zh-min-nan.wikipedia.org": 2
+      },
+      {
+        "zh.wikipedia.org": 26
+      },
+      {
+        "zh.wiktionary.org": 3
+      }
+    ]
+  },
+  {
+    "time_start": "13:00",
+    "time_end": "14:00",
+    "statistics": [
+      {
+        "af.wikipedia.org": 5
+      },
+      {
+        "ar.wikipedia.org": 75
+      },
+      {
+        "auth.wikimedia.org": 36
+      },
+      {
+        "az.wikipedia.org": 3
+      },
+      {
+        "bg.wikipedia.org": 2
+      },
+      {
+        "bn.wikipedia.org": 3
+      },
+      {
+        "bs.wikipedia.org": 1
+      },
+      {
+        "ca.wikipedia.org": 4
+      },
+      {
+        "commons.wikimedia.org": 1301
+      },
+      {
+        "cs.wikipedia.org": 14
+      },
+      {
+        "da.wikipedia.org": 2
+      },
+      {
+        "de.wikipedia.org": 24
+      },
+      {
+        "de.wikisource.org": 2
+      },
+      {
+        "de.wiktionary.org": 5
+      },
+      {
+        "el.wikipedia.org": 3
+      },
+      {
+        "el.wiktionary.org": 1
+      },
+      {
+        "en.wikinews.org": 2
+      },
+      {
+        "en.wikipedia.org": 143
+      },
+      {
+        "en.wikiquote.org": 3
+      },
+      {
+        "en.wikisource.org": 15
+      },
+      {
+        "en.wikiversity.org": 1
+      },
+      {
+        "en.wiktionary.org": 23
+      },
+      {
+        "eo.wikipedia.org": 1
+      },
+      {
+        "es.wikipedia.org": 15
+      },
+      {
+        "es.wiktionary.org": 1
+      },
+      {
+        "et.wikipedia.org": 1
+      },
+      {
+        "eu.wikipedia.org": 1
+      },
+      {
+        "fa.wikipedia.org": 16
+      },
+      {
+        "fi.wikipedia.org": 2
+      },
+      {
+        "fi.wiktionary.org": 3
+      },
+      {
+        "fr.wikipedia.org": 15
+      },
+      {
+        "fr.wikiquote.org": 1
+      },
+      {
+        "fr.wikisource.org": 11
+      },
+      {
+        "fr.wiktionary.org": 32
+      },
+      {
+        "fy.wikipedia.org": 1
+      },
+      {
+        "he.wikipedia.org": 6
+      },
+      {
+        "he.wikisource.org": 2
+      },
+      {
+        "hi.wikipedia.org": 1
+      },
+      {
+        "hr.wikipedia.org": 5
+      },
+      {
+        "ht.wikipedia.org": 1
+      },
+      {
+        "hu.wikipedia.org": 6
+      },
+      {
+        "hy.wikipedia.org": 5
+      },
+      {
+        "id.wikimedia.org": 1
+      },
+      {
+        "id.wikipedia.org": 7
+      },
+      {
+        "incubator.wikimedia.org": 2
+      },
+      {
+        "io.wikipedia.org": 2
+      },
+      {
+        "is.wiktionary.org": 9
+      },
+      {
+        "it.wikinews.org": 1
+      },
+      {
+        "it.wikipedia.org": 37
+      },
+      {
+        "it.wikisource.org": 1
+      },
+      {
+        "ja.wikipedia.org": 10
+      },
+      {
+        "ja.wiktionary.org": 1
+      },
+      {
+        "kaa.wikipedia.org": 1
+      },
+      {
+        "kbd.wiktionary.org": 1
+      },
+      {
+        "kk.wikipedia.org": 3
+      },
+      {
+        "ko.wikipedia.org": 6
+      },
+      {
+        "ko.wikisource.org": 1
+      },
+      {
+        "krc.wikipedia.org": 2
+      },
+      {
+        "ku.wikipedia.org": 1
+      },
+      {
+        "ku.wiktionary.org": 1
+      },
+      {
+        "lb.wikipedia.org": 1
+      },
+      {
+        "li.wiktionary.org": 1
+      },
+      {
+        "lt.wikipedia.org": 6
+      },
+      {
+        "lv.wikipedia.org": 10
+      },
+      {
+        "meta.wikimedia.org": 18
+      },
+      {
+        "mg.wikipedia.org": 2
+      },
+      {
+        "ml.wikipedia.org": 6
+      },
+      {
+        "mn.wikipedia.org": 1
+      },
+      {
+        "my.wikipedia.org": 3
+      },
+      {
+        "mzn.wikipedia.org": 1
+      },
+      {
+        "nds.wikipedia.org": 1
+      },
+      {
+        "nl.wikipedia.org": 5
+      },
+      {
+        "nl.wikisource.org": 1
+      },
+      {
+        "no.wikipedia.org": 2
+      },
+      {
+        "pl.wikipedia.org": 9
+      },
+      {
+        "pl.wikisource.org": 3
+      },
+      {
+        "pl.wiktionary.org": 2
+      },
+      {
+        "pt.wikipedia.org": 15
+      },
+      {
+        "pt.wiktionary.org": 1
+      },
+      {
+        "ro.wikipedia.org": 8
+      },
+      {
+        "ru.wikipedia.org": 22
+      },
+      {
+        "ru.wikisource.org": 8
+      },
+      {
+        "simple.wikipedia.org": 4
+      },
+      {
+        "simple.wiktionary.org": 3
+      },
+      {
+        "sk.wikipedia.org": 1
+      },
+      {
+        "sl.wikipedia.org": 3
+      },
+      {
+        "so.wiktionary.org": 1
+      },
+      {
+        "species.wikimedia.org": 7
+      },
+      {
+        "sq.wikipedia.org": 2
+      },
+      {
+        "sr.wikipedia.org": 3
+      },
+      {
+        "sr.wikiquote.org": 6
+      },
+      {
+        "sv.wikipedia.org": 15
+      },
+      {
+        "sv.wikivoyage.org": 1
+      },
+      {
+        "sw.wikipedia.org": 1
+      },
+      {
+        "ta.wikipedia.org": 1
+      },
+      {
+        "ta.wikisource.org": 2
+      },
+      {
+        "te.wikipedia.org": 1
+      },
+      {
+        "te.wikisource.org": 1
+      },
+      {
+        "th.wikipedia.org": 1
+      },
+      {
+        "tr.wikipedia.org": 14
+      },
+      {
+        "uk.wikipedia.org": 10
+      },
+      {
+        "uk.wikiquote.org": 1
+      },
+      {
+        "uk.wikisource.org": 2
+      },
+      {
+        "ur.wikipedia.org": 5
+      },
+      {
+        "uz.wikipedia.org": 1
+      },
+      {
+        "vi.wikipedia.org": 1
+      },
+      {
+        "vi.wikisource.org": 2
+      },
+      {
+        "vi.wiktionary.org": 1
+      },
+      {
+        "wikimania.wikimedia.org": 1
+      },
+      {
+        "wuu.wikipedia.org": 1
+      },
+      {
+        "www.mediawiki.org": 13
+      },
+      {
+        "www.wikidata.org": 97
+      },
+      {
+        "zh.wikipedia.org": 7
+      },
+      {
+        "zh.wiktionary.org": 2
+      }
+    ]
+  },
+  {
+    "time_start": "14:00",
+    "time_end": "15:00",
+    "statistics": [
+      {
+        "af.wikipedia.org": 3
+      },
+      {
+        "ar.wikipedia.org": 48
+      },
+      {
+        "auth.wikimedia.org": 30
+      },
+      {
+        "az.wikipedia.org": 6
+      },
+      {
+        "bew.wikipedia.org": 1
+      },
+      {
+        "bn.wikibooks.org": 2
+      },
+      {
+        "bn.wikipedia.org": 10
+      },
+      {
+        "bo.wikipedia.org": 3
+      },
+      {
+        "br.wikipedia.org": 2
+      },
+      {
+        "bs.wikipedia.org": 2
+      },
+      {
+        "ca.wikipedia.org": 7
+      },
+      {
+        "ckb.wikipedia.org": 1
+      },
+      {
+        "commons.wikimedia.org": 1846
+      },
+      {
+        "cs.wikibooks.org": 2
+      },
+      {
+        "cs.wikipedia.org": 6
+      },
+      {
+        "cv.wikipedia.org": 1
+      },
+      {
+        "da.wikipedia.org": 2
+      },
+      {
+        "de.wikipedia.org": 26
+      },
+      {
+        "de.wikiversity.org": 1
+      },
+      {
+        "de.wiktionary.org": 4
+      },
+      {
+        "el.wikipedia.org": 4
+      },
+      {
+        "el.wiktionary.org": 2
+      },
+      {
+        "en.wikinews.org": 1
+      },
+      {
+        "en.wikipedia.org": 137
+      },
+      {
+        "en.wikiquote.org": 1
+      },
+      {
+        "en.wikisource.org": 12
+      },
+      {
+        "en.wiktionary.org": 58
+      },
+      {
+        "eo.wikipedia.org": 1
+      },
+      {
+        "es.wikipedia.org": 36
+      },
+      {
+        "fa.wikipedia.org": 14
+      },
+      {
+        "fa.wikisource.org": 2
+      },
+      {
+        "fi.wikipedia.org": 10
+      },
+      {
+        "foundation.wikimedia.org": 2
+      },
+      {
+        "fr.wikipedia.org": 18
+      },
+      {
+        "fr.wikisource.org": 36
+      },
+      {
+        "fr.wiktionary.org": 2
+      },
+      {
+        "fy.wikipedia.org": 1
+      },
+      {
+        "gl.wikipedia.org": 2
+      },
+      {
+        "gl.wiktionary.org": 1
+      },
+      {
+        "gu.wikipedia.org": 1
+      },
+      {
+        "ha.wikipedia.org": 2
+      },
+      {
+        "he.wikipedia.org": 4
+      },
+      {
+        "hi.wikipedia.org": 4
+      },
+      {
+        "ht.wikipedia.org": 2
+      },
+      {
+        "hu.wikipedia.org": 3
+      },
+      {
+        "hy.wikipedia.org": 1
+      },
+      {
+        "id.wikipedia.org": 18
+      },
+      {
+        "incubator.wikimedia.org": 1
+      },
+      {
+        "is.wiktionary.org": 3
+      },
+      {
+        "it.wikipedia.org": 32
+      },
+      {
+        "it.wikisource.org": 4
+      },
+      {
+        "it.wiktionary.org": 4
+      },
+      {
+        "ja.wikipedia.org": 9
+      },
+      {
+        "ja.wiktionary.org": 1
+      },
+      {
+        "ka.wiktionary.org": 1
+      },
+      {
+        "kk.wikipedia.org": 1
+      },
+      {
+        "ko.wikipedia.org": 7
+      },
+      {
+        "ky.wikipedia.org": 1
+      },
+      {
+        "li.wiktionary.org": 7
+      },
+      {
+        "lt.wikipedia.org": 2
+      },
+      {
+        "lv.wikipedia.org": 5
+      },
+      {
+        "meta.wikimedia.org": 6
+      },
+      {
+        "mg.wikipedia.org": 1
+      },
+      {
+        "mr.wikipedia.org": 5
+      },
+      {
+        "my.wikipedia.org": 1
+      },
+      {
+        "nl.wikipedia.org": 3
+      },
+      {
+        "nl.wikisource.org": 1
+      },
+      {
+        "nl.wiktionary.org": 2
+      },
+      {
+        "nn.wikipedia.org": 1
+      },
+      {
+        "os.wikipedia.org": 1
+      },
+      {
+        "pl.wikipedia.org": 17
+      },
+      {
+        "pl.wikiquote.org": 1
+      },
+      {
+        "pl.wiktionary.org": 1
+      },
+      {
+        "pt.wikipedia.org": 10
+      },
+      {
+        "pt.wiktionary.org": 1
+      },
+      {
+        "ro.wikipedia.org": 3
+      },
+      {
+        "ru.wikipedia.org": 11
+      },
+      {
+        "ru.wikisource.org": 2
+      },
+      {
+        "ru.wiktionary.org": 2
+      },
+      {
+        "sd.wikipedia.org": 1
+      },
+      {
+        "sh.wikipedia.org": 1
+      },
+      {
+        "simple.wikipedia.org": 2
+      },
+      {
+        "sk.wikipedia.org": 2
+      },
+      {
+        "so.wiktionary.org": 1
+      },
+      {
+        "species.wikimedia.org": 4
+      },
+      {
+        "sq.wikipedia.org": 1
+      },
+      {
+        "sr.wikiquote.org": 7
+      },
+      {
+        "sv.wikipedia.org": 3
+      },
+      {
+        "sv.wiktionary.org": 5
+      },
+      {
+        "sw.wikipedia.org": 1
+      },
+      {
+        "ta.wikipedia.org": 3
+      },
+      {
+        "ta.wikisource.org": 4
+      },
+      {
+        "te.wikipedia.org": 2
+      },
+      {
+        "te.wikisource.org": 2
+      },
+      {
+        "th.wikipedia.org": 2
+      },
+      {
+        "tly.wikipedia.org": 1
+      },
+      {
+        "tr.wikipedia.org": 39
+      },
+      {
+        "uk.wikipedia.org": 11
+      },
+      {
+        "uk.wikisource.org": 1
+      },
+      {
+        "ur.wikipedia.org": 6
+      },
+      {
+        "uz.wikipedia.org": 1
+      },
+      {
+        "vi.wiktionary.org": 3
+      },
+      {
+        "wa.wiktionary.org": 1
+      },
+      {
+        "wuu.wikipedia.org": 1
+      },
+      {
+        "www.wikidata.org": 81
+      },
+      {
+        "www.wikifunctions.org": 2
+      },
+      {
+        "zh-yue.wikipedia.org": 1
+      },
+      {
+        "zh.wikipedia.org": 30
+      },
+      {
+        "zh.wiktionary.org": 1
+      }
+    ]
+  },
+  {
+    "time_start": "15:00",
+    "time_end": "16:00",
+    "statistics": [
+      {
+        "ar.wikipedia.org": 6
+      },
+      {
+        "arz.wikipedia.org": 2
+      },
+      {
+        "auth.wikimedia.org": 11
+      },
+      {
+        "az.wikipedia.org": 1
+      },
+      {
+        "bg.wikipedia.org": 3
+      },
+      {
+        "commons.wikimedia.org": 727
+      },
+      {
+        "de.wikipedia.org": 12
+      },
+      {
+        "de.wiktionary.org": 10
+      },
+      {
+        "en.wikipedia.org": 60
+      },
+      {
+        "en.wikisource.org": 7
+      },
+      {
+        "en.wiktionary.org": 17
+      },
+      {
+        "eo.wikipedia.org": 1
+      },
+      {
+        "es.wikipedia.org": 8
+      },
+      {
+        "fa.wikipedia.org": 3
+      },
+      {
+        "fa.wikisource.org": 1
+      },
+      {
+        "fi.wikipedia.org": 1
+      },
+      {
+        "fi.wiktionary.org": 2
+      },
+      {
+        "fr.wikipedia.org": 16
+      },
+      {
+        "fr.wikisource.org": 6
+      },
+      {
+        "fr.wiktionary.org": 1
+      },
+      {
+        "ha.wikipedia.org": 2
+      },
+      {
+        "he.wikipedia.org": 5
+      },
+      {
+        "he.wikiquote.org": 1
+      },
+      {
+        "he.wikisource.org": 1
+      },
+      {
+        "hi.wikipedia.org": 1
+      },
+      {
+        "hif.wikipedia.org": 1
+      },
+      {
+        "hr.wikipedia.org": 1
+      },
+      {
+        "ht.wikipedia.org": 1
+      },
+      {
+        "hu.wikipedia.org": 1
+      },
+      {
+        "hy.wikipedia.org": 2
+      },
+      {
+        "id.wikipedia.org": 1
+      },
+      {
+        "io.wikipedia.org": 2
+      },
+      {
+        "it.wikipedia.org": 4
+      },
+      {
+        "it.wikisource.org": 1
+      },
+      {
+        "ja.wikipedia.org": 1
+      },
+      {
+        "jv.wikisource.org": 11
+      },
+      {
+        "ka.wikipedia.org": 1
+      },
+      {
+        "ko.wikipedia.org": 1
+      },
+      {
+        "lv.wikipedia.org": 2
+      },
+      {
+        "meta.wikimedia.org": 29
+      },
+      {
+        "mg.wiktionary.org": 8
+      },
+      {
+        "my.wikipedia.org": 1
+      },
+      {
+        "mzn.wikipedia.org": 1
+      },
+      {
+        "nl.wikipedia.org": 2
+      },
+      {
+        "no.wikipedia.org": 3
+      },
+      {
+        "ny.wikipedia.org": 1
+      },
+      {
+        "oc.wikipedia.org": 1
+      },
+      {
+        "pa.wikipedia.org": 1
+      },
+      {
+        "pl.wikipedia.org": 4
+      },
+      {
+        "pl.wiktionary.org": 1
+      },
+      {
+        "pt.wikipedia.org": 6
+      },
+      {
+        "ro.wikipedia.org": 1
+      },
+      {
+        "ru.wikibooks.org": 1
+      },
+      {
+        "ru.wikipedia.org": 2
+      },
+      {
+        "si.wiktionary.org": 1
+      },
+      {
+        "simple.wikipedia.org": 3
+      },
+      {
+        "species.wikimedia.org": 3
+      },
+      {
+        "sq.wikipedia.org": 1
+      },
+      {
+        "sr.wikipedia.org": 2
+      },
+      {
+        "sv.wikipedia.org": 2
+      },
+      {
+        "ta.wikisource.org": 2
+      },
+      {
+        "tr.wikipedia.org": 14
+      },
+      {
+        "uk.wikipedia.org": 3
+      },
+      {
+        "uk.wikisource.org": 2
+      },
+      {
+        "ur.wikipedia.org": 4
+      },
+      {
+        "wa.wiktionary.org": 2
+      },
+      {
+        "www.wikidata.org": 39
+      },
+      {
+        "www.wikifunctions.org": 5
+      },
+      {
+        "zh.wikipedia.org": 33
+      },
+      {
+        "zh.wiktionary.org": 2
+      }
+    ]
+  },
+  {
+    "time_start": "16:00",
+    "time_end": "17:00",
+    "statistics": [
+      {
+        "an.wikipedia.org": 17
+      },
+      {
+        "ar.wikipedia.org": 3
+      },
+      {
+        "auth.wikimedia.org": 19
+      },
+      {
+        "be.wikisource.org": 1
+      },
+      {
+        "bg.wikipedia.org": 4
+      },
+      {
+        "bn.wikipedia.org": 3
+      },
+      {
+        "bs.wikipedia.org": 2
+      },
+      {
+        "ca.wikipedia.org": 1
+      },
+      {
+        "co.wikipedia.org": 1
+      },
+      {
+        "commons.wikimedia.org": 1200
+      },
+      {
+        "cs.wikipedia.org": 4
+      },
+      {
+        "cs.wiktionary.org": 1
+      },
+      {
+        "de.wikipedia.org": 19
+      },
+      {
+        "de.wikisource.org": 1
+      },
+      {
+        "de.wikiversity.org": 1
+      },
+      {
+        "de.wiktionary.org": 8
+      },
+      {
+        "el.wikipedia.org": 2
+      },
+      {
+        "el.wikisource.org": 1
+      },
+      {
+        "en.wikinews.org": 1
+      },
+      {
+        "en.wikipedia.org": 126
+      },
+      {
+        "en.wikisource.org": 18
+      },
+      {
+        "en.wiktionary.org": 13
+      },
+      {
+        "es.wikipedia.org": 12
+      },
+      {
+        "et.wikipedia.org": 1
+      },
+      {
+        "eu.wikipedia.org": 4
+      },
+      {
+        "fa.wikipedia.org": 7
+      },
+      {
+        "fi.wiktionary.org": 1
+      },
+      {
+        "fr.wikipedia.org": 26
+      },
+      {
+        "fr.wikisource.org": 3
+      },
+      {
+        "fr.wiktionary.org": 2
+      },
+      {
+        "gl.wikipedia.org": 1
+      },
+      {
+        "gl.wiktionary.org": 1
+      },
+      {
+        "he.wikipedia.org": 4
+      },
+      {
+        "hi.wikipedia.org": 2
+      },
+      {
+        "hu.wiktionary.org": 1
+      },
+      {
+        "hy.wikipedia.org": 3
+      },
+      {
+        "id.wikipedia.org": 3
+      },
+      {
+        "ig.wikipedia.org": 2
+      },
+      {
+        "incubator.wikimedia.org": 1
+      },
+      {
+        "it.wikipedia.org": 7
+      },
+      {
+        "it.wiktionary.org": 4
+      },
+      {
+        "ja.wikipedia.org": 5
+      },
+      {
+        "ja.wiktionary.org": 1
+      },
+      {
+        "ka.wikipedia.org": 2
+      },
+      {
+        "ko.wikipedia.org": 2
+      },
+      {
+        "lv.wikipedia.org": 2
+      },
+      {
+        "meta.wikimedia.org": 5
+      },
+      {
+        "mg.wikipedia.org": 1
+      },
+      {
+        "mg.wiktionary.org": 10
+      },
+      {
+        "mk.wikipedia.org": 5
+      },
+      {
+        "nl.wikipedia.org": 3
+      },
+      {
+        "nn.wikipedia.org": 5
+      },
+      {
+        "no.wikipedia.org": 2
+      },
+      {
+        "pl.wikipedia.org": 7
+      },
+      {
+        "pl.wikisource.org": 7
+      },
+      {
+        "pt.wikipedia.org": 4
+      },
+      {
+        "ro.wikipedia.org": 2
+      },
+      {
+        "ru.wikibooks.org": 1
+      },
+      {
+        "ru.wikipedia.org": 12
+      },
+      {
+        "ru.wikisource.org": 1
+      },
+      {
+        "ru.wiktionary.org": 1
+      },
+      {
+        "simple.wikipedia.org": 3
+      },
+      {
+        "species.wikimedia.org": 5
+      },
+      {
+        "sr.wikipedia.org": 3
+      },
+      {
+        "sv.wikipedia.org": 2
+      },
+      {
+        "sv.wiktionary.org": 5
+      },
+      {
+        "ta.wikipedia.org": 2
+      },
+      {
+        "ta.wikisource.org": 1
+      },
+      {
+        "te.wikipedia.org": 1
+      },
+      {
+        "tg.wikipedia.org": 1
+      },
+      {
+        "th.wikipedia.org": 2
+      },
+      {
+        "tk.wikipedia.org": 1
+      },
+      {
+        "tly.wikipedia.org": 1
+      },
+      {
+        "tr.wikipedia.org": 5
+      },
+      {
+        "tr.wiktionary.org": 26
+      },
+      {
+        "uk.wikipedia.org": 9
+      },
+      {
+        "uk.wikisource.org": 1
+      },
+      {
+        "ur.wikipedia.org": 4
+      },
+      {
+        "uz.wikipedia.org": 1
+      },
+      {
+        "vi.wikipedia.org": 2
+      },
+      {
+        "vi.wiktionary.org": 1
+      },
+      {
+        "www.wikidata.org": 154
+      },
+      {
+        "www.wikifunctions.org": 15
+      },
+      {
+        "zh.wikipedia.org": 6
+      },
+      {
+        "zh.wikisource.org": 1
+      },
+      {
+        "zh.wikivoyage.org": 1
+      }
+    ]
+  }
+]

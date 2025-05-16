@@ -26,21 +26,23 @@ CREATE TABLE domain_hourly_stats (
 
 -- Bot Creation Stats (Category A, Query 2)
 CREATE TABLE bot_creation_stats (
-  time_range TEXT,
+  time_start TIMESTAMP,
+  time_end TIMESTAMP,
   domain TEXT,
   created_by_bots INT,
-  PRIMARY KEY ((time_range), domain)
+  PRIMARY KEY ((time_start, time_end), domain)
 );
 
 -- Top Users (Category A, Query 3)
 CREATE TABLE top_users (
-  time_range TEXT,
+  time_start TIMESTAMP,
+  time_end TIMESTAMP,
   user_id TEXT,
   user_name TEXT,
   page_count INT,
   page_titles LIST<TEXT>,
-  PRIMARY KEY ((time_range), page_count, user_id)
-) WITH CLUSTERING ORDER BY (page_count DESC);
+  PRIMARY KEY ((time_start, time_end), user_id)
+);
 
 
 
