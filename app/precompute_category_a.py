@@ -42,6 +42,7 @@ def compute_and_write_reports(spark):
         .load() \
         .filter((col("event_hour") >= start_time) & (col("event_hour") < end_time))
     
+
     # request 1
     domain_hourly_stats = raw_df.groupBy("event_hour", "domain") \
         .agg(count("*").alias("page_count")) \
@@ -53,6 +54,7 @@ def compute_and_write_reports(spark):
         .mode("append") \
         .save()
     
+
     # request 2
     bot_stats = raw_df.filter(col("is_bot") == True) \
         .groupBy("domain") \
@@ -65,6 +67,7 @@ def compute_and_write_reports(spark):
         .options(table="bot_creation_stats", keyspace=keyspace) \
         .mode("append") \
         .save()
+    
     
     # request 3
     top_users = raw_df.groupBy("user_id", "user_name") \

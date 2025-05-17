@@ -87,24 +87,30 @@ def get_time_bounds():
 @app.get("/category-a/domain-hourly-stats", response_model=List[DomainStat])
 def get_domain_hourly_stats():
     start_time, end_time = get_time_bounds()
-    query = (
-        "SELECT hour_bucket, domain, page_count "
-        "FROM domain_hourly_stats "
-        "WHERE hour_bucket >= %s AND hour_bucket < %s ALLOW FILTERING"
-    )
-    rows = client.execute(query, (start_time, end_time))
+
+    # fetch the data by hour
     buckets: Dict[datetime, List[Dict[str, int]]] = {}
-    for row in rows:
-        hour = row["hour_bucket"]
-        buckets.setdefault(hour, []).append({row["domain"]: row["page_count"]})
-    return [
-        DomainStat(
+    current = start_time
+    
+    # iterate over each hour in the range
+    while current < end_time:
+        rows = client.execute(
+            "SELECT domain, page_count FROM domain_hourly_stats WHERE hour_bucket = %s",
+            (current,)
+        )
+        for row in rows:
+            buckets.setdefault(current, []).append({row["domain"]: row["page_count"]})
+        current += timedelta(hours=1)
+
+    # create the response
+    result: List[DomainStat] = []
+    for hour in sorted(buckets.keys()):
+        result.append(DomainStat(
             time_start=hour.strftime("%H:%M"),
             time_end=(hour + timedelta(hours=1)).strftime("%H:%M"),
             statistics=buckets[hour]
-        )
-        for hour in sorted(buckets.keys())
-    ]
+        ))
+    return result
 
 @app.get("/category-a/bot-creation-stats", response_model=BotStatsResponse)
 def get_bot_creation_stats():

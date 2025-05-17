@@ -6,7 +6,7 @@ import time
 import logging
 import backoff
 
-# configure logging
+
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
@@ -45,7 +45,7 @@ def stream_wikimedia_events(producer):
     session.keep_alive = False  # Disable keep-alive to avoid stale connections
     
     with session.get(wiki_url, stream=True, timeout=60) as response:
-        response.raise_for_status()  # Ensure we got a successful response
+        response.raise_for_status()
         
         for line in response.iter_lines():
             if line:

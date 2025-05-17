@@ -2,5 +2,5 @@ app/cache
 app/cassandra_writer_checkpoint
 app/jars
 app/stream_filter_checkpoint
+.DS_Store
 DS_Store
-

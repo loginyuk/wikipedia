@@ -1,4 +1,4 @@
-
+# to run this script with logic reading from Kafka the  and writing to Cassandra
 docker run -d --name spark-row-submit \
   --network wiki-network \
   -v "$(pwd)/app:/opt/app" \
@@ -24,7 +24,7 @@ docker run -d --name spark-row-submit \
 
 
 
-
+# to run this script with logic processing the data and writing to Cassandra
 docker run --rm --name spark-precompute-submit \
   --network wiki-network \
   -v "$(pwd)/app:/opt/app" \

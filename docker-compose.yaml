@@ -132,7 +132,7 @@ services:
     networks:
       - wiki-network
   
-  rest-api:
+  res t-api:
     build:
       context: .
       dockerfile: Dockerfile
