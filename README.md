@@ -1,7 +1,7 @@
 
 # Project: 🤖 
 
-Authors: **Lohin Yurii, Bronetsyi Volodymyr**
+Authors: **Lohin Yurii, Bronetskyi Volodymyr**
 
 
 ## 🖥 Usage
