@@ -52,7 +52,6 @@ json_df = df.selectExpr("CAST(value AS STRING) as json_str") \
     .filter(col("user_id").isNotNull())
 
  
-# filtered_df = json_df.filter((col("user_id").isNotNull()))
 
 def process_batch(batch_df, batch_id):
     count = batch_df.count()
